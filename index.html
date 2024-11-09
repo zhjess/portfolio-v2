@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessica Zheng | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+<body>
+    <!-- Left Sidebar (Navigation) -->
+    <div class="sidebar">
+        <ul>
+            <li><a class="navbar-item" href="#title">Home</a></li>
+            <li><a class="navbar-item" href="#about">About Me</a></li>
+            <li><a class="navbar-item" href="#projects">Projects</a></li>
+            <li><a class="navbar-item" href="#contact">Contact Me</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content (Portfolio Sections) -->
+    <div class="content">
+        <section id="title" class="section">
+            <h1 class="has-text-white">Welcome to my portfolio</h1>
+            <h3 id="subheader">Hi, I'm Jess. A full stack developer.</h3>
+            <div class="button-container">
+                <button class="button is-dark has-text-weight-bold" id="button">
+                    <span class="icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </span>
+                    <span>See my work</span>
+                </button>
+                <button class="button is-dark has-text-weight-bold">
+                    <span class="icon">
+                        <i class="fa-solid fa-download"></i>
+                    </span>
+                    <span>Download my CV</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h1 class="has-text-white">About me</h1>
+            <p>
+                Before transitioning into tech, I spent several years working in the finance industry.
+            </p>
+            <p>
+                I've always been drawn to technology and its ability to be leveraged to build impactful tools to solve real-world problems. This interest led me to explore data analysis and SQL as I wanted to create tools that could make my daily workflows more efficient.
+            </p>
+            <p>
+                It wasn’t long before I discovered the great world of programming, and what began as a curiosity soon evolved into a genuine passion for building technology-driven solutions.
+            </p>
+            <h3 class="has-text-white">My technical skills</h3>
+            <div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h1 class="has-text-white">Projects</h1>
+            <div class="projects-container">
+                <div class="project has-text-grey-lighter">
+                    <div class="flex-container project-header">
+                        <h3 class="has-text-grey-lighter" id="project-name">Finsight</h3>
+                        <span class="has-text-grey-lighter" id="project-tag">web app</span>
+                    </div>
+                    <img src="./Finsight.png" alt="Finsight">
+                    <p>A description of my first project.</p>
+                    <div class="project-footer flex-container">
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-typescript-plain colored"></i>
+                            </span>
+                            <span>TypeScript</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-nodejs-plain colored"></i>
+                            </span>
+                            <span>Node.js</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-express-original"></i>
+                            </span>
+                            <span>Express</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-react-original colored"></i>
+                            </span>
+                            <span>React.js</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-redux-original colored"></i>
+                            </span>
+                            <span>Redux</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-materialui-plain colored"></i>
+                            </span>
+                            <span>Material UI</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-postgresql-plain colored"></i>
+                            </span>
+                            <span>PostgreSQL</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="flex-container project-header">
+                        <h3 class="has-text-grey-lighter" id="project-name">GymFlow</h3>
+                        <span class="has-text-grey-lighter" id="project-tag">web app</span>
+                    </div>
+                    <img src="./GymFlow.png" alt="GymFlow">
+                    <p>A description of my second project.</p>
+                </div>
+                <div class="project">
+                    <div class="flex-container project-header">
+                        <h3 class="has-text-grey-lighter" id="project-name">Plant Daycare</h3>
+                        <span class="has-text-grey-lighter" id="project-tag">web server API</span>
+                    </div>
+                    <img src="./PlantDaycare.png" alt="PlantDaycare">
+                    <p>A description of my third project.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>If you'd like to get in touch, feel free to send me a message!</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <textarea id="message" name="message" placeholder="Your message..." required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Prevents images from growing larger than their parent container */
+}
+
+/* Body and layout styling */
+body {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    color: #d4d4d4;
+    display: flex;
+    height: 100vh;
+    background-color: #121212;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 0.1em;
+    flex-wrap: wrap;
+}
+
+.badge-icon {
+    margin-right: 0.3em;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 20vw;
+    height: 100%;
+    background-color: #121212;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #f5f5f5;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: right;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #444;
+}
+
+/* Content area */
+.content {
+    margin-left: 20vw; 
+    width: 80vw;
+    height: 100%;
+    overflow-y: auto;
+}
+
+/* Section styling */
+.section {
+    background-color: #131313;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+#title {
+    justify-content: center;
+}
+
+.button-container {
+    padding-top: 1rem;
+}
+
+/* Projects container */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; 
+}
+
+.project {
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.project-header {
+    margin-top: 1.5em;
+    padding: 1em 0;
+}
+
+#project-name {
+    margin: 0;
+}
+
+#project-tag {
+    margin-left: 1.5em;
+    font-size: 1rem;
+    background-color: #242424;
+    padding: 0.3em 0.7em;
+    border-radius: 15px;
+}
+
+.project-badge{
+    background-color: #2f2f2f;
+    font-size: 1.2rem;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    margin-right: 0.3em;
+    margin-bottom: 0.5rem;
+}
+
+#subheader {
+    color: #54cfd3
+}
+
+h1 {
+    font-size: 2em;
+    color: #d4d4d4;
+}
+
+h2 {
+    color: #a1a1a1
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #555;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #444;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Responsive Design --- */
+
+/* When screen width is less than or equal to 768px (Tablets) */
+@media (max-width: 768px) {
+    body {
+        display: block;
+        width: 100vw;
+    }
+
+    /* Sidebar styling for smaller screens */
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+    .sidebar ul {
+        padding: 10px;
+        background-color: #333;
+        margin: 0;
+        display: flex; 
+        justify-content: space-between; 
+        flex-direction: row;
+    }
+
+    .sidebar ul li {
+        flex: 1;
+        text-align: center;
+        padding: 2em;
+    }
+
+    /* Style for active link in the sidebar */
+    .sidebar ul li a.active {
+        background-color: blue;
+        color: red;
+    }
+
+    /* Make content take full width */
+    .content {
+        margin-left: 0;
+        padding-left: 2em; 
+        padding-right: 2em;
+        width: 100%;
+    }
+
+    /* Section padding for smaller screens */
+    .section {
+        margin-bottom: 0.5em;
+        padding: 0;
+    }
+
+    /* Make projects one column on smaller screens */
+    .projects-container {
+        grid-template-columns: 1fr; /* Switch to 1 column layout on smaller screens */
+    }
+
+    h1, h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+}
+
+/* When screen width is between 769px and 1024px (Small screens, laptops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* 1 column layout on smaller screens */
+    }
+
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    .section {
+        margin-bottom: 0.5em;
+        padding: 5em 3.5em;
+    }
+
+    .content {
+        /* max-width: 100%;
+        width: 80vw; */
+    }
+}
+
+/* When screen width is between 1025px and 1200px (Desktops, large screens) */
+@media (min-width: 1025px) and (max-width: 1400px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* 1 column layout on small screens */
+    }
+
+    h1, h2 {
+        font-size: 2.2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .section {
+        padding-top: 5em;
+        margin-bottom: 1em;
+    }
+}
+
+/* When screen width is greater than 1200px (Large Desktops) */
+@media (min-width: 1401px) {
+    .sidebar {
+        max-width: 25em;
+    }
+
+    .section {
+        /* width: 100%; */
+        padding-left: 5em;
+        padding-right: 5em;
+        padding-top: 10em;
+    }
+
+    h1, h2 {
+        font-size: 2.4em;
+    }
+
+    h3 {
+        font-size: 1.6em;
+    }
+}
