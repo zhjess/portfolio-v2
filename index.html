@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jessica Zheng | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" 
-    referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
+
 <body>
     <!-- Left Sidebar (Navigation) -->
     <div class="sidebar">
         <ul>
             <li><a class="navbar-item" href="#title">Home</a></li>
-            <li><a class="navbar-item" href="#about">About Me</a></li>
+            <li><a class="navbar-item" href="#about">About</a></li>
             <li><a class="navbar-item" href="#projects">Projects</a></li>
-            <li><a class="navbar-item" href="#contact">Contact Me</a></li>
+            <li><a class="navbar-item" href="#contact">Contact</a></li>
         </ul>
     </div>
 
@@ -26,12 +29,6 @@
             <h1 class="has-text-white">Welcome to my portfolio</h1>
             <h3 id="subheader">Hi, I'm Jess. A full stack developer.</h3>
             <div class="button-container">
-                <button class="button is-dark has-text-weight-bold" id="button">
-                    <span class="icon">
-                        <i class="fa-solid fa-briefcase"></i>
-                    </span>
-                    <span>See my work</span>
-                </button>
                 <button class="button is-dark has-text-weight-bold">
                     <span class="icon">
                         <i class="fa-solid fa-download"></i>
@@ -47,15 +44,22 @@
                 Before transitioning into tech, I spent several years working in the finance industry.
             </p>
             <p>
-                I've always been drawn to technology and its ability to be leveraged to build impactful tools to solve real-world problems. This interest led me to explore data analysis and SQL as I wanted to create tools that could make my daily workflows more efficient.
+                I've always been drawn to technology and its ability to build impactful solutions to solve real-world
+                problems. This interest was what initially led me to explore basic coding as I wanted to create tools
+                that could make my daily workflows more efficient. It wasn’t long before I discovered the vast world of
+                programming, and what began as a curiosity soon evolved into a genuine passion for crafting
+                technology-driven solutions.
             </p>
             <p>
-                It wasn’t long before I discovered the great world of programming, and what began as a curiosity soon evolved into a genuine passion for building technology-driven solutions.
+                Prior to changing industries, I cultivated skills in analytical problem-solving, communication,
+                stakeholder management and adapting to changing environments. These skills, combined with a solid
+                foundation in programming concepts shape my approach to software development — focused on continuous
+                learning, staying flexible, and delivering practical, data-driven results.
             </p>
-            <h3 class="has-text-white">My technical skills</h3>
-            <div>
-
-            </div>
+            <p class="has-text-weight-bold">
+                My passion for tech was the driving force behind my career change. I'd love to bring my passion,
+                development expertise and a fresh perspective to your project.
+            </p>
         </section>
 
         <section id="projects" class="section">
@@ -66,8 +70,29 @@
                         <h3 class="has-text-grey-lighter" id="project-name">Finsight</h3>
                         <span class="has-text-grey-lighter" id="project-tag">web app</span>
                     </div>
-                    <img src="./Finsight.png" alt="Finsight">
-                    <p>A description of my first project.</p>
+                    <div class="project-image">
+                        <img src="./Finsight.png" alt="Finsight">
+                        <div class="project-image-links">
+                            <a href="https://github.com/zhjess/finsight" class="has-text-weight-bold flex-container">
+                                <span class="icon badge-icon">
+                                    <i class="devicon-github-original"></i>
+                                </span>
+                                github
+                            </a>
+                            <a href="https://finsight-six.vercel.app/" class="has-text-weight-bold flex-container">
+                                <span class="icon badge-icon">
+                                    <i class="devicon-vercel-original"></i>
+                                </span>
+                                vercel
+                            </a>
+                        </div>
+                    </div>
+                    <p>
+                        Dashboard for visualising key business metrics, managing transactions, and predicting future revenue
+                        trends. It features an intuitive dashboard built using MaterialUI and offers full CRUD functionality
+                        for transactions and products, along with regression-based revenue forecasting. RTK Query ensures
+                        efficient data fetching, caching, and state management.
+                    </p>
                     <div class="project-footer flex-container">
                         <span class="project-badge has-text-weight-bold flex-container">
                             <span class="icon badge-icon">
@@ -107,45 +132,222 @@
                         </span>
                         <span class="project-badge has-text-weight-bold flex-container">
                             <span class="icon badge-icon">
+                                <i class="devicon-prisma-original"></i>
+                            </span>
+                            <span>Prisma</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-postgresql-plain colored"></i>
+                            </span>
+                            <span>PostgreSQL</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-vercel-original"></i>
+                            </span>
+                            <span>Vercel</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="project has-text-grey-lighter">
+                    <div class="flex-container project-header">
+                        <h3 class="has-text-grey-lighter" id="project-name">GymFlow</h3>
+                        <span class="has-text-grey-lighter" id="project-tag">web app</span>
+                    </div>
+                    <div class="project-image">
+                        <img src="./GymFlow.png" alt="GymFlow">
+                        <div class="project-image-links">
+                            <a href="https://github.com/nlina-0/T3A2-B_FullStackApp" class="has-text-weight-bold flex-container">
+                                <span class="icon badge-icon">
+                                    <i class="devicon-github-original"></i>
+                                </span>
+                                github
+                            </a>
+                            <a href="https://gymflow101.netlify.app/" class="has-text-weight-bold flex-container">
+                                <span class="icon badge-icon">
+                                    <i class="devicon-netlify-plain"></i>
+                                </span>
+                                netlify
+                            </a>
+                        </div>
+                    </div>
+                    <p>
+                        Class management app that streamlines booking, staff, and customer management for gyms. The app
+                        features a responsive, user-friendly interface built with the Bulma CSS framework for a seamless
+                        experience. Role-based access control (RBAC) and JWT authentication ensure secure user management and
+                        authorization.
+                    </p>
+                    <div class="project-footer flex-container">
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-javascript-plain colored"></i>
+                            </span>
+                            <span>JavaScript</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-nodejs-plain colored"></i>
+                            </span>
+                            <span>Node.js</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-express-original"></i>
+                            </span>
+                            <span>Express</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-mongoose-original colored"></i>
+                            </span>
+                            <span>Mongoose</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-react-original colored"></i>
+                            </span>
+                            <span>React.js</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-bulma-plain colored"></i>
+                            </span>
+                            <span>Bulma</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-mongodb-plain colored"></i>
+                            </span>
+                            <span>MongoDB</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-jest-plain colored"></i>
+                            </span>
+                            <span>Jest</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-netlify-plain colored"></i>
+                            </span>
+                            <span>Netlify</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="project has-text-grey-lighter">
+                    <div class="flex-container project-header">
+                        <h3 class="has-text-grey-lighter" id="project-name">Plant daycare</h3>
+                        <span class="has-text-grey-lighter" id="project-tag">web server API</span>
+                    </div>
+                    <div class="project-image">
+                        <img src="./PlantDaycare.png" alt="PlantDaycare">
+                        <div class="project-image-links">
+                            <a href="https://github.com/zhjess/api-webserver" class="has-text-weight-bold flex-container">
+                                <span class="icon badge-icon">
+                                    <i class="devicon-github-original"></i>
+                                </span>
+                                github
+                            </a>
+                        </div>
+                    </div>
+                    <p>
+                        Daycare enrollment and customer management app that features a normalized relational database schema
+                        for optimized data integrity and query performance. Users can communicate through comments on
+                        enrollment records. Comprehensive API documentation is provided with clear guidelines, usage
+                        instructions, and examples for easy integration.
+                    </p>
+                    <div class="project-footer flex-container">
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-python-plain colored"></i>
+                            </span>
+                            <span>Python</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-flask-original"></i>
+                            </span>
+                            <span>Flask</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-sqlalchemy-plain"></i>
+                            </span>
+                            <span>SQLAlchemy</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
                                 <i class="devicon-postgresql-plain colored"></i>
                             </span>
                             <span>PostgreSQL</span>
                         </span>
                     </div>
                 </div>
-                <div class="project">
+                <div class="project has-text-grey-lighter">
                     <div class="flex-container project-header">
-                        <h3 class="has-text-grey-lighter" id="project-name">GymFlow</h3>
-                        <span class="has-text-grey-lighter" id="project-tag">web app</span>
+                        <h3 class="has-text-grey-lighter" id="project-name">HR manager</h3>
+                        <span class="has-text-grey-lighter" id="project-tag">command-line app</span>
                     </div>
-                    <img src="./GymFlow.png" alt="GymFlow">
-                    <p>A description of my second project.</p>
-                </div>
-                <div class="project">
-                    <div class="flex-container project-header">
-                        <h3 class="has-text-grey-lighter" id="project-name">Plant Daycare</h3>
-                        <span class="has-text-grey-lighter" id="project-tag">web server API</span>
+                    <div class="project-image">
+                        <img src="./HRManager.png" alt="HRManager">
+                        <div class="project-image-links">
+                            <a href="https://github.com/zhjess/terminal-app" class="has-text-weight-bold flex-container">
+                                <span class="icon badge-icon">
+                                    <i class="devicon-github-original"></i>
+                                </span>
+                                github
+                            </a>
+                        </div>
                     </div>
-                    <img src="./PlantDaycare.png" alt="PlantDaycare">
-                    <p>A description of my third project.</p>
+                    <p>
+                        A simple, no-fuss HR management system that allows users to efficiently manage employee records stored in a
+                        CSV file. Users can add, remove, modify, search, and view records, with validated fields including name,
+                        id, email, mobile, and role. pytest utilised for testing the core functionalities and validation rules.
+                    </p>
+                    <div class="project-footer flex-container">
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-python-plain colored"></i>
+                            </span>
+                            <span>Python</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-bash-plain"></i>
+                            </span>
+                            <span>Bash</span>
+                        </span>
+                        <span class="project-badge has-text-weight-bold flex-container">
+                            <span class="icon badge-icon">
+                                <i class="devicon-pytest-plain colored"></i>
+                            </span>
+                            <span>pytest</span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch, feel free to send me a message!</p>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br>
-                <textarea id="message" name="message" placeholder="Your message..." required></textarea><br>
-                <button type="submit">Send</button>
-            </form>
+            <h1 class="has-text-white">Contact me</h1>
+            <p>If you'd like to get in touch, find me here:</p>
+            <div class="socials-icons-container">
+                <a href="https://www.linkedin.com/in/jessicazheng7/" target="_blank" aria-label="LinkedIn" class="linkedin-icon">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/zhjess" target="_blank" aria-label="GitHub" class="github-icon">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="mailto:jessica.zheng67@gmail.com" target="_blank" aria-label="Email" class="email-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            
         </section>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>

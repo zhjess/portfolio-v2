@@ -8,22 +8,23 @@
     box-sizing: border-box;
 }
 
+/* Ensure images are responsive */
 img {
     width: 100%;
     height: auto;
     max-width: 100%; /* Prevents images from growing larger than their parent container */
 }
 
-/* Body and layout styling */
+/* Body and Layout Styling */
 body {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     color: #d4d4d4;
     display: flex;
+    flex-direction: column;
     height: 100vh;
     background-color: #121212;
     overflow-x: hidden;
-    flex-direction: column;
 }
 
 .flex-container {
@@ -37,7 +38,7 @@ body {
     margin-right: 0.3em;
 }
 
-/* Sidebar styling */
+/* Sidebar Styling */
 .sidebar {
     width: 20vw;
     height: 100%;
@@ -50,6 +51,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10; /* Ensure the sidebar stays on top of content */
 }
 
 .sidebar ul {
@@ -65,21 +67,21 @@ body {
 .sidebar ul li a {
     text-decoration: none;
     display: block;
+    transition: font-weight 0.3s ease;
 }
 
 .sidebar ul li a:hover {
-    background-color: #444;
+    font-weight: 800;
 }
 
-/* Content area */
+/* Content Area */
 .content {
-    margin-left: 20vw; 
+    margin-left: 20vw; /* Make space for the sidebar */
     width: 80vw;
-    height: 100%;
-    overflow-y: auto;
+    height: 100vh;
 }
 
-/* Section styling */
+/* Section Styling */
 .section {
     background-color: #131313;
     min-height: 100vh;
@@ -96,7 +98,7 @@ body {
     padding-top: 1rem;
 }
 
-/* Projects container */
+/* Projects Container */
 .projects-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -110,43 +112,143 @@ body {
     width: 100%;
 }
 
-.project-header {
+.project > p {
+    font-size: 0.9em;
     margin-top: 1.5em;
-    padding: 1em 0;
+}
+
+.project-header {
+    margin-top: 1em;
+    padding-bottom: 1.5em;
 }
 
 #project-name {
     margin: 0;
 }
 
+.project-image {
+    position: relative; 
+}
+
+.project-image > img {
+    height: 100%;
+}
+
+.project-image-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5em;
+}
+
+.project-image-links a {
+    background-color: #242424;
+    padding: 0.3em 0.7em;
+    border-radius: 0.5em;
+}
+
+.project-image:hover {
+    cursor: pointer; 
+}
+
+.project-image div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: white;
+    margin-bottom: 0;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.15s ease-in-out, visibility 0s 0.15s;
+}
+
+.project-image div a {
+    color: white;
+}
+
+.project-image:hover div {
+    visibility: visible; 
+    opacity: 0.85; 
+    transition: opacity 0.15s ease-in-out, visibility 0s 0s;
+}
+
 #project-tag {
     margin-left: 1.5em;
     font-size: 1rem;
-    background-color: #242424;
+    background-color: #252525;
     padding: 0.3em 0.7em;
     border-radius: 15px;
 }
 
-.project-badge{
-    background-color: #2f2f2f;
-    font-size: 1.2rem;
-    padding: 0.5em 1em;
-    border-radius: 8px;
+.project-badge {
+    background-color: #1c1c1c;
+    font-size: 0.8em;
+    padding: 0.4em 1em;
+    border-radius: 0.2em;
     margin-right: 0.3em;
     margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-badge:hover {
+    background-color: #242424;
+}
+
+.project-footer {
+    margin-top: 0.5em;
+}
+
+.socials-icons-container {
+    display: flex;
+    align-items: center;
+}
+
+.socials-icons-container a {
+    color: white;
+    background-color: #1a1a1a;
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 50%;
+    height: 2.5em;
+    width: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s
+}
+
+.socials-icons-container .linkedin-icon:hover {
+    background-color: #0077B5;
+}
+
+.socials-icons-container .github-icon:hover {
+    background-color: #5a5a5a;
+}
+
+.socials-icons-container .email-icon:hover {
+    background-color: #2f9d45;
+}
+
+.socials-icons-container i {
+    font-size: 1em;
 }
 
 #subheader {
-    color: #54cfd3
+    color: #54cfd3;
 }
 
 h1 {
     font-size: 2em;
     color: #d4d4d4;
+    padding-bottom: 0.7em;
 }
 
 h2 {
-    color: #a1a1a1
+    color: #a1a1a1;
 }
 
 h3 {
@@ -185,7 +287,7 @@ form button:hover {
     background-color: #444;
 }
 
-/* Smooth scrolling */
+/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
 }
@@ -199,17 +301,18 @@ html {
         width: 100vw;
     }
 
-    /* Sidebar styling for smaller screens */
+    /* Sidebar for smaller screens */
     .sidebar {
         width: 100%;
-        position: relative;
         height: auto;
         margin: 0;
         padding: 0;
+        overflow-y: auto;
     }
+
     .sidebar ul {
+        width: 100%;
         padding: 10px;
-        background-color: #333;
         margin: 0;
         display: flex; 
         justify-content: space-between; 
@@ -219,32 +322,31 @@ html {
     .sidebar ul li {
         flex: 1;
         text-align: center;
-        padding: 2em;
+        padding: 0;
     }
 
-    /* Style for active link in the sidebar */
     .sidebar ul li a.active {
-        background-color: blue;
-        color: red;
+        font-weight: bold;
     }
 
-    /* Make content take full width */
+    /* Content adjustments for small screens */
     .content {
-        margin-left: 0;
         padding-left: 2em; 
         padding-right: 2em;
+        margin: 0;
+        padding: 0;
         width: 100%;
     }
 
-    /* Section padding for smaller screens */
+    /* Section padding for small screens */
     .section {
         margin-bottom: 0.5em;
-        padding: 0;
+        padding: 5em 2em 3em 2em;
     }
 
     /* Make projects one column on smaller screens */
     .projects-container {
-        grid-template-columns: 1fr; /* Switch to 1 column layout on smaller screens */
+        grid-template-columns: 1fr;
     }
 
     h1, h2 {
@@ -272,19 +374,18 @@ html {
 
     .section {
         margin-bottom: 0.5em;
-        padding: 5em 3.5em;
+        padding: 5em 4em 3em 4em;
     }
 
     .content {
-        /* max-width: 100%;
-        width: 80vw; */
+        width: 80vw;
     }
 }
 
 /* When screen width is between 1025px and 1200px (Desktops, large screens) */
 @media (min-width: 1025px) and (max-width: 1400px) {
     .projects-container {
-        grid-template-columns: 1fr; /* 1 column layout on small screens */
+        grid-template-columns: 1fr;
     }
 
     h1, h2 {
@@ -298,6 +399,7 @@ html {
     .section {
         padding-top: 5em;
         margin-bottom: 1em;
+        padding-left: 5em;
     }
 }
 
@@ -308,10 +410,9 @@ html {
     }
 
     .section {
-        /* width: 100%; */
         padding-left: 5em;
         padding-right: 5em;
-        padding-top: 10em;
+        padding-top: 7em;
     }
 
     h1, h2 {
