@@ -15,6 +15,33 @@ img {
     max-width: 100%; /* Prevents images from growing larger than their parent container */
 }
 
+.speech-bubble {
+    position: relative;
+    background-color: #54cfd3; /* Light color for the bubble */
+    color: #121212; /* Dark text */
+    font-size: 2em; /* Adjust text size as needed */
+    padding: 1em;
+    border-radius: 1em;
+    max-width: 80%;
+    margin: 2em auto;
+    /* text-align: center; */
+    display: inline-block; /* Ensures it doesn't take up the whole width */
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -0.8em; /* Position the tail below the bubble */
+    left: 30%; /* Center the tail */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 0;
+    height: 0;
+    border-left: 0.5em solid transparent; /* Tail left side */
+    border-right: 0.5em solid transparent; /* Tail right side */
+    border-top: 1em solid #54cfd3; /* Tail color */
+}
+
+
 /* Body and Layout Styling */
 body {
     font-family: "Raleway", sans-serif;
@@ -143,7 +170,7 @@ body {
 
 .project-image-links a {
     background-color: #242424;
-    padding: 0.3em 0.7em;
+    padding: 0.3em 1em;
     border-radius: 0.5em;
 }
 
