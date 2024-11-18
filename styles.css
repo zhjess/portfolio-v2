@@ -153,9 +153,10 @@ body {
 
 .project-image-links {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 5em;
+    gap: 1em;
 }
 
 .project-image-links a {
@@ -379,6 +380,16 @@ html {
     /* Make projects one column on smaller screens */
     .projects-container {
         grid-template-columns: 1fr;
+    }
+
+    .project-image-links {
+        justify-content: center;
+        gap: 1em;
+        padding: 0;
+    }
+    
+    .project-image-links a {
+        font-size: 0.9em;
     }
 
     h1, h2 {
