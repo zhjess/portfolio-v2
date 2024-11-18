@@ -116,6 +116,13 @@ body {
     padding: 0.3em;
 }
 
+/* About */
+#about {
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: center;
+}
+
 /* Projects Container */
 .projects-container {
     display: grid;
@@ -222,13 +229,12 @@ body {
 .socials-icons-container {
     display: flex;
     align-items: center;
+    gap: 1em;
 }
 
 .socials-icons-container a {
     color: white;
     background-color: #1a1a1a;
-    padding: 1em;
-    margin: 0.5em;
     border-radius: 50%;
     height: 2.5em;
     width: 2.5em;
@@ -253,6 +259,14 @@ body {
 
 .socials-icons-container i {
     font-size: 1em;
+}
+
+/* Contact */
+
+#contact {
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: center;
 }
 
 #subheader {
@@ -374,7 +388,12 @@ html {
     /* Section padding for small screens */
     .section {
         margin-bottom: 0.5em;
-        padding: 5em 2em 3em 2em;
+        padding: 4em 2em 3em 2em;
+    }
+
+    #about {
+        padding-top: 5em;
+        justify-content: normal;
     }
 
     /* Make projects one column on smaller screens */
@@ -459,7 +478,7 @@ html {
     }
 
     .section {
-        padding-top: 5em;
+        padding-top: 3.5em;
         margin-bottom: 1em;
         padding-left: 5em;
     }
@@ -474,7 +493,7 @@ html {
     .section {
         padding-left: 5em;
         padding-right: 5em;
-        padding-top: 7em;
+        padding-top: 6em;
     }
 
     h1, h2 {
