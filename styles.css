@@ -15,32 +15,6 @@ img {
     max-width: 100%; /* Prevents images from growing larger than their parent container */
 }
 
-.speech-bubble {
-    position: relative;
-    background-color: #54cfd3; /* Light color for the bubble */
-    color: #121212; /* Dark text */
-    font-size: 2em; /* Adjust text size as needed */
-    padding: 1em;
-    border-radius: 1em;
-    max-width: 80%;
-    margin: 2em auto;
-    /* text-align: center; */
-    display: inline-block; /* Ensures it doesn't take up the whole width */
-}
-
-.speech-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: -0.8em; /* Position the tail below the bubble */
-    left: 30%; /* Center the tail */
-    transform: translateX(-50%); /* Adjust for centering */
-    width: 0;
-    height: 0;
-    border-left: 0.5em solid transparent; /* Tail left side */
-    border-right: 0.5em solid transparent; /* Tail right side */
-    border-top: 1em solid #54cfd3; /* Tail color */
-}
-
 
 /* Body and Layout Styling */
 body {
@@ -123,6 +97,23 @@ body {
 
 .button-container {
     padding-top: 1rem;
+}
+
+/* Title page */
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 5em;
+}
+
+.profile-pic {
+    width: 15em;
+    border-radius: 50%;
+    border: solid white;
+    padding: 0.3em;
 }
 
 /* Projects Container */
@@ -365,6 +356,21 @@ html {
         width: 100%;
     }
 
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 15em;
+        border-radius: 50%;
+        border: solid white;
+        padding: 0.3em;
+    }
+
     /* Section padding for small screens */
     .section {
         margin-bottom: 0.5em;
@@ -406,6 +412,21 @@ html {
 
     .content {
         width: 80vw;
+    }
+
+    .title-container {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 3em;
+    }
+
+    .profile-pic {
+    width: 12em;
+    border-radius: 50%;
+    border: solid white;
+    padding: 0.3em;
     }
 }
 
