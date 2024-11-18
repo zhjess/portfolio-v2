@@ -12,7 +12,7 @@
 img {
     width: 100%;
     height: auto;
-    max-width: 100%; /* Prevents images from growing larger than their parent container */
+    max-width: 100%;
 }
 
 
@@ -48,11 +48,10 @@ body {
     top: 0;
     left: 0;
     color: #f5f5f5;
-    padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10; /* Ensure the sidebar stays on top of content */
+    z-index: 10; 
 }
 
 .sidebar ul {
@@ -77,7 +76,7 @@ body {
 
 /* Content Area */
 .content {
-    margin-left: 20vw; /* Make space for the sidebar */
+    margin-left: 20vw;
     width: 80vw;
     height: 100vh;
 }
@@ -93,6 +92,8 @@ body {
 
 #title {
     justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .button-container {
@@ -104,7 +105,6 @@ body {
 .title-container {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: center;
     gap: 5em;
 }
@@ -136,7 +136,6 @@ body {
 }
 
 .project-header {
-    margin-top: 1em;
     padding-bottom: 1.5em;
 }
 
@@ -414,10 +413,14 @@ html {
         width: 80vw;
     }
 
+    #title {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     .title-container {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     align-items: center;
     gap: 3em;
     }
